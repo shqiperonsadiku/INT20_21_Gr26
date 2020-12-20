@@ -32,7 +32,7 @@ header
     align-items: center;
 }
 
-header.logo 
+header .logo 
 {
 position: relative;
 font-size: 2em;
