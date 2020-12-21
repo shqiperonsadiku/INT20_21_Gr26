@@ -1,32 +1,72 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <link href="D:\GitDesktop\INT20_21_Gr26\projekti_style.css" rel="stylesheet" type="text/css">
-        <title>Health & Fitness</title>
-    </head>
-    <body>
-        <section>
-            <header>
-                <a href="projekti.html" class="logo">Health&Fitness</a> 
-                <ul class="navigation">
-                    <li><a href="projekti.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="exercises.html">Exercises</a></li>
-                    <li><a href="recipes.html">Recipes</a></li>
-                    <li><a href="bmi.html">BMI Calculator</a></li>
-                </ul>
-            </header>
-            <div class="content">
-                <div class="contentBox">
-                    <h2>Be overall healthy</h2>
-                    <p>Write something here about living
-                        healthy, exercising regurarly and 
-                        eating healthy, and its benefits
-                    </p>
-                </div>
+
+<head>
+    <meta charset="utf-8" />
+    <link href="D:\GitDesktop\INT20_21_Gr26\projekti_style.css" rel="stylesheet" type="text/css">
+    <title>Health & Fitness</title>
+</head>
+
+<body>
+    <section>
+        <header>
+            <a href="projekti.html" class="logo">Health&Fitness</a>
+            <ul class="navigation">
+                <li><a href="projekti.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="exercises.html">Exercises</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="#" class="button-bmi" id="button-bmi">BMI Calculator</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="contentBox">
+                <h2>Be overall healthy</h2>
+                <p>Write something here about living
+                    healthy, exercising regurarly and
+                    eating healthy, and its benefits
+                </p>
             </div>
-        </section>
-    </body>
+        </div>
+    </section>
+    <div class="pop-up-bmi">
+        <script type="text/javascript">
+            function BMI() {
+                var h = document.getElementById('h').value;
+                var w = document.getElementById('w').value;
+                var bmi = w / (h / 100 * h / 100);
+                var bmio = (bmi.toFixed(2));
+
+                document.getElementById("result").innerHTML = "Your BMI is " + bmio;
+            }
+
+            document.getElementById('button-bmi').addEventListener('click',
+                function () {
+                    document.querySelector('.pop-up-bmi').style.display = 'flex';
+                });
+            
+            document.querySelector('.close').addEventListener('click',
+                function(){
+                    document.querySelector('.pop-up-bmi').style.display = 'none';
+                });
+        </script>
+        <div class="bmi-content">
+            <div class="bmi-calculator">
+                <div class="close">+</div>
+                <h2>BMI Calculator</h2>
+                <br />
+                <p class="text">Height: </p>
+                <input type="text" id="h">
+                <p class="text">Weight: </p>
+                <input type="text" id="w">
+                <br />
+                <p id="result"></p>
+                <button id="btn" onClick="BMI()">Calculate</button>
+                <p id="info">Please enter height [cm] and weight [kg]</p>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
