@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <link href="D:\GitDesktop\INT20_21_Gr26\projekti_style.css" rel="stylesheet" type="text/css">
+    <link href="D:\GitDesktop\INT20_21_Gr26\projekti.js" rel="stylesheet" type="text/javascript">
     <title>Health & Fitness</title>
 </head>
 
@@ -44,12 +45,7 @@
             document.getElementById('button-bmi').addEventListener('click',
                 function () {
                     document.querySelector('.pop-up-bmi').style.display = 'flex';
-                });
-            
-            document.querySelector('.close').addEventListener('click',
-                function(){
-                    document.querySelector('.pop-up-bmi').style.display = 'none';
-                });
+                });                   
         </script>
         <div class="bmi-content">
             <div class="bmi-calculator">
@@ -60,11 +56,19 @@
                 <input type="text" id="h">
                 <p class="text">Weight: </p>
                 <input type="text" id="w">
-                <br />
+                <br>
+                <br>
+                <br>
                 <p id="result"></p>
                 <button id="btn" onClick="BMI()">Calculate</button>
                 <p id="info">Please enter height [cm] and weight [kg]</p>
             </div>
+            <script>
+                 document.querySelector('.close').addEventListener('click',
+                     function(){
+                    document.querySelector('.pop-up-bmi').style.display = 'none';
+                    });
+            </script> 
         </div>
     </div>
 </body>
