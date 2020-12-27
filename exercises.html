@@ -13,13 +13,13 @@
     <section class="exercises">
         <header>
             <a href="#" class="logo">Exercises</a>
+            <div class="toggleMenu" onclick="toggleMenu();"></div>
             <ul class="navigation">
                 <li><a href="projekti.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="exercises.html">Exercises</a></li>
                 <li><a href="recipes.html">Recipes</a></li>
-                <li><a href="bmi.html">BMI Calculator</a></li>
             </ul>
         </header>
         <div class="content">
@@ -28,6 +28,14 @@
             </div>
         </div>
     </section>
+    <script type="text/javascript">
+        function toggleMenu(){
+            const toggleMenu = document.querySelector('.toggleMenu');
+            const navigation = document.querySelector('.navigation');
+            toggleMenu.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
     <footer>
         <div class="container">
             <div class="logo-footer">

@@ -237,3 +237,94 @@ footer  p
 {
     color: #fff;
 }
+
+@media (max-width: 991px)
+{
+
+    header
+    {
+        padding: 15px 40px;
+    }
+    section 
+    {
+        padding: 40px;
+        background: url(images/backgroundimg1.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .content .contentBox h2
+    {
+        font-size: 2.5em; 
+    }
+    .content .contentBox p
+    {
+        font-size: 1em; 
+    }
+    header .navigation
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #000;
+        z-index: 10;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    header .navigation.active 
+    {
+        display: flex;
+    }
+    header .navigation li a 
+    {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+    .toggleMenu
+    {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: url(images/menu.png);
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        z-index: 11;
+    }
+    .toggleMenu.active
+    {
+        background: url(images/close.png);
+        background-position: center;
+        background-size: 25px;
+        background-repeat: no-repeat;
+    }
+
+    footer
+    {
+        padding: 40px;
+    }
+    footer .container
+    {
+        flex-direction: column;
+    }
+    footer .container .sec
+    {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+    footer .container .logo-footer,
+    .sec.aboutus,
+    .contact
+    {
+        width: 100%;
+    }
+    .copyrightText
+    {
+        padding: 8px 40px;
+    }
+
+}

@@ -14,6 +14,7 @@
     <section>
         <header>
             <p class="logo">Health&Fitness</p>
+            <div class="toggleMenu" onclick="toggleMenu();"></div>
             <ul class="navigation">
                 <li><a href="projekti.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -33,6 +34,14 @@
             </div>
         </div>
     </section>
+    <script type="text/javascript">
+        function toggleMenu(){
+            const toggleMenu = document.querySelector('.toggleMenu');
+            const navigation = document.querySelector('.navigation');
+            toggleMenu.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
     <div class="pop-up-bmi">
         <script type="text/javascript">
             function BMI() {
