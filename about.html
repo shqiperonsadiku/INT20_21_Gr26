@@ -2,21 +2,80 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>About</title>
+        <link href="D:\GitDesktop\INT20_21_Gr26\about.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+              integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <title>About | Health&Fitness</title>
     </head>
     <body>
         <section>
             <header>
-                <a href="#" class="logo">Fitness</a>
+                <a href="#" class="logo">About</a>
+                <div class="toggleMenu" onclick="toggleMenu();"></div>
                 <ul class="navigation">
                     <li><a href="projekti.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="exercises.html">Exercises</a></li>
                     <li><a href="recipes.html">Recipes</a></li>
-                    <li><a href="bmi.html">BMI Calculator</a></li>
                 </ul>
             </header>
-        <h1>About</h1>
+            <div class="content">
+                <div class="contentBox">
+                    <h2>About Health&Fitness</h2>
+                    <p>Write something here about living
+                        healthy, exercising regurarly, 
+                        eating healthy, and its benefits
+                    </p>
+                </div>
+            </div>
+        </section>
+        <script type="text/javascript">
+            function toggleMenu(){
+                const toggleMenu = document.querySelector('.toggleMenu');
+                const navigation = document.querySelector('.navigation');
+                toggleMenu.classList.toggle('active');
+                navigation.classList.toggle('active');
+            }
+        </script>
+        <footer>
+            <div class="container">
+                <div class="logo-footer">
+                    <h2>Health & Fitness</h2>
+                </div>
+                <div class="sec aboutus">
+                    <h2>About Us</h2>
+                    <p>This website is focused on giving you tips on how to improve 
+                        your health and appearance through eating healthy and exercises.</p>
+                    <ul class="sci">
+                        <li><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></i></a></li>
+                        <li><a href="https://www.instagram.com/"><i class="fa fa-instagram" aria-hidden="true"></i></i></a></li>
+                    </ul>
+                </div>
+                <div class="sec contact">
+                    <h2>Contact Info</h2>
+                    <ul class="info">
+                        <li>
+                            <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                            <p>Rruga B<br>Prishtine, 10000<br>Kosove</p>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                            <p><a href="tel:38345123456">+383 45 123 456</a><br>
+                                <a href="tel:38349123456">+383 49 123 456</a></p>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                            <p><a href="mailto:healthandfitness@gmail.com">healthandfitness@gmail.com</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <div class="copyrightText">
+            <p>Copyright © 2021 Health and Fitness. All Rights Reserved.    
+            <a href="#">Terms and Conditions</a><a href="#">Privacy Policy</a></p>
+        </div>
     </body>
 </html>
