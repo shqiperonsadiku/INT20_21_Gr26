@@ -27,7 +27,7 @@ header
     top: 0;
     left: 0;
     width: 100%;
-    padding: 25px 100px;
+    padding: 30px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,10 +35,22 @@ header
     z-index: 999;
 }
 
-header .logo 
+header .logo
+{
+    position: fixed;
+    width: 100px;
+    height: 5px;
+    padding-bottom: 75px;
+}
+header .logo-text 
+{
+    position: fixed;
+    padding-left: 120px;
+}
+header .logo-text p
 {
     position: relative;
-    font-size: 2em;
+    font-size: 1.8em;
     color: #fff;
     text-transform: uppercase;
     font-weight: 700;
