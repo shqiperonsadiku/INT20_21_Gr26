@@ -27,7 +27,7 @@ header
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 100px;
+    padding: 5px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,7 +37,7 @@ header
 
 header .logo
 {
-    position: fixed;
+    position: relative;
     width: 100px;
     height: 5px;
     padding-bottom: 75px;
@@ -261,7 +261,7 @@ footer  p
     section 
     {
         padding: 40px;
-        background: url(images/backgroundimg1.jpg);
+        background: url(images/recipes.jpg);
         background-size: cover;
         background-position: center;
     }

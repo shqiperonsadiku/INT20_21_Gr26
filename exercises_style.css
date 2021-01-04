@@ -26,7 +26,7 @@ header
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 100px;
+    padding: 5px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,7 +36,7 @@ header
 
 header .logo
 {
-    position: fixed;
+    position: relative;
     width: 100px;
     height: 5px;
     padding-bottom: 75px;
@@ -44,7 +44,7 @@ header .logo
 header .logo-text 
 {
     position: fixed;
-    padding-left: 120px;
+    padding-left: 100px;
 }
 header .logo-text p
 {
@@ -202,7 +202,7 @@ header .navigation li a:hover
 }
 .img3d .box .img-content h2 a
 {
-    color: #fff;
+    color: transparent;
     transition: 0.5s;
     text-transform: uppercase;
     margin-bottom: 5px;
@@ -212,6 +212,7 @@ header .navigation li a:hover
 }
 .img3d .box:hover .img-content h2 a 
 {
+    color: #fff;
     transform: translateY(0px);
     transition-delay: none;
     text-decoration: none;
@@ -397,7 +398,7 @@ footer  p
     section 
     {
         padding: 40px;
-        background: url(images/backgroundimg1.jpg);
+        background: url(images/fitness.jpg);
         background-size: cover;
         background-position: center;
     }
