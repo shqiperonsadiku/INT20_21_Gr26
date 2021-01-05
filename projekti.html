@@ -3,50 +3,139 @@
 
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="D:\GitDesktop\INT20_21_Gr26\projekti_style.css" rel="stylesheet" type="text/css">
     <link href="D:\GitDesktop\INT20_21_Gr26\projekti.js" rel="stylesheet" type="text/javascript">
     <title>Health & Fitness</title>
-    <link rel="icon" type="image/jpg" href="images/logo1.png"/> 
+    <link rel="icon" type="image/jpg" href="images/logo1.png" />
 </head>
 
 <body>
-    <section>
-        <header>
-            <div class="logo">
-                <img src="images/logo3.png" width="110" height="75">
-            </div>
-            <div class="logo-text">
-                <p>Health and Fitness</p>
-            </div>
-            <div class="toggleMenu" onclick="toggleMenu();"></div>
-            <ul class="navigation">
-                <li><a href="projekti.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="exercises.html">Exercises</a></li>
-                <li><a href="recipes.html">Recipes</a></li>
-                <li><a href="#" class="button-bmi" id="button-bmi">BMI Calculator</a></li>
-            </ul>
-        </header>
+    <header>
+        <div class="logo">
+            <img src="images/logo3.png" width="110" height="75">
+        </div>
+        <div class="logo-text">
+            <p>Health and Fitness</p>
+        </div>
+        <div class="toggleMenu" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+            <li><a href="projekti.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#recipes">Recipes</a></li>
+            <li><a href="exercises.html">Exercises</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#" class="button-bmi" id="button-bmi">BMI Calculator</a></li>
+        </ul>
+    </header>
+    <section class="banner" id="banner">
         <div class="content">
             <div class="contentBox">
                 <h2>Be overall healthy</h2>
                 <p>Write something here about living
-                    healthy, exercising regurarly, 
+                    healthy, exercising regurarly,
                     eating healthy, and its benefits
                 </p>
             </div>
         </div>
     </section>
+    <section class="about" id="about">
+        <div class="row">
+            <div class="col50">
+                <h2 class="title-text"><span>A</span>bout Us</h2>
+                <p>some text some text some text some text some text
+                    some text some text some textsome text some text some text
+                    some text some text some text some text some text some text 
+                    some text some text some text some text some text some text
+                    some text some text some text some text some text some text.<br><br>
+                    some text some text some text some text some text
+                    some text some text some textsome text some text some text
+                    some text some text some text some text some text some text 
+                    some text some text some text some text some text some text
+                    some text some text some text some text some text some text.
+                </p>
+            </div>
+            <div class="col50">
+                <div class="col50-img">
+                    <img src="images/backgroundimg.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="recipes" id="recipes">
+        <div class="title">
+            <h2 class="title-text"><span>H</span>ealthy <span>R</span>ecipes</h2>
+            <p>some text some text some text some text some text some text some text</p>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgBx">
+                    <a href="projekti.html"><img src="images/recipes.jpg"></a>
+                </div>
+                <div class="text">
+                    <h3>Special Salads</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="images/recipes.jpg">
+                </div>
+                <div class="text">
+                    <h3>Special Soups</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="images/recipes.jpg">
+                </div>
+                <div class="text">
+                    <h3>Special Pasta</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="images/recipes.jpg">
+                </div>
+                <div class="text">
+                    <h3>Special Salads</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="images/recipes.jpg">
+                </div>
+                <div class="text">
+                    <h3>Special Soups</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="images/recipes.jpg">
+                </div>
+                <div class="text">
+                    <h3>Special Pasta</h3>
+                </div>
+            </div>
+        </div>
+        <div class="title">
+            <a href="recipes.html" class="btn">View All</a>
+        </div> 
+    </section>
+
     <script type="text/javascript">
-        function toggleMenu(){
+        function toggleMenu() {
             const toggleMenu = document.querySelector('.toggleMenu');
             const navigation = document.querySelector('.navigation');
             toggleMenu.classList.toggle('active');
             navigation.classList.toggle('active');
         }
+
+        window.addEventListener('scroll', function(){
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
     </script>
     <div class="pop-up-bmi">
         <script type="text/javascript">
@@ -81,11 +170,11 @@
                 <p id="info">Please enter height [cm] and weight [kg]</p>
             </div>
             <script>
-                 document.querySelector('.close').addEventListener('click',
-                     function(){
-                    document.querySelector('.pop-up-bmi').style.display = 'none';
+                document.querySelector('.close').addEventListener('click',
+                    function () {
+                        document.querySelector('.pop-up-bmi').style.display = 'none';
                     });
-            </script> 
+            </script>
         </div>
     </div>
     <footer>
@@ -95,12 +184,15 @@
             </div>
             <div class="sec aboutus">
                 <h2>About Us</h2>
-                <p>This website is focused on giving you tips on how to improve 
+                <p>This website is focused on giving you tips on how to improve
                     your health and appearance through eating healthy and exercises.</p>
                 <ul class="sci">
-                    <li><a href="https://www.facebook.com/everydayhealth" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                    <li><a href="https://twitter.com/EverydayHealth" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></i></a></li>
-                    <li><a href="https://www.instagram.com/everydayhealth/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></i></a></li>
+                    <li><a href="https://www.facebook.com/everydayhealth" target="_blank"><i class="fa fa-facebook"
+                                aria-hidden="true"></i></a></li>
+                    <li><a href="https://twitter.com/EverydayHealth" target="_blank"><i class="fa fa-twitter"
+                                aria-hidden="true"></i></i></a></li>
+                    <li><a href="https://www.instagram.com/everydayhealth/" target="_blank"><i class="fa fa-instagram"
+                                aria-hidden="true"></i></i></a></li>
                 </ul>
             </div>
             <div class="sec contact">
@@ -108,13 +200,14 @@
                 <ul class="info">
                     <li>
                         <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-                        <p><a href="https://www.google.com/maps/place/Rruga+B,+Prishtin%C3%AB/@42.6489516,21.1705272,17z/data=!3m1!4b1!4m5!3m4!1s0x13549ec0d5603ad7:0x1ba2ce0329d66240!8m2!3d42.6489477!4d21.1727159" 
-                            target="_blank">Rruga B<br>Prishtine, 10000<br>Kosove</a></p>
+                        <p><a href="https://www.google.com/maps/place/Rruga+B,+Prishtin%C3%AB/@42.6489516,21.1705272,17z/data=!3m1!4b1!4m5!3m4!1s0x13549ec0d5603ad7:0x1ba2ce0329d66240!8m2!3d42.6489477!4d21.1727159"
+                                target="_blank">Rruga B<br>Prishtine, 10000<br>Kosove</a></p>
                     </li>
                     <li>
                         <span><i class="fa fa-phone" aria-hidden="true"></i></span>
                         <p><a href="tel:38345123456">+383 45 123 456</a><br>
-                            <a href="tel:38349123456">+383 49 123 456</a></p>
+                            <a href="tel:38349123456">+383 49 123 456</a>
+                        </p>
                     </li>
                     <li>
                         <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
@@ -125,10 +218,10 @@
         </div>
     </footer>
     <div class="copyrightText">
-        <p>Copyright © 2021 Health and Fitness. All Rights Reserved.    
-        <a href="#">Terms and Conditions</a><a href="#">Privacy Policy</a></p>
+        <p>Copyright © 2021 Health and Fitness. All Rights Reserved.
+            <a href="#">Terms and Conditions</a><a href="#">Privacy Policy</a>
+        </p>
     </div>
 </body>
 
 </html>
-
