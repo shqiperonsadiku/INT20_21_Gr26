@@ -23,6 +23,15 @@ header
     background: #444;
     z-index: 999;
 }
+header.sticky
+{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    background: #444;
+    padding: 5px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
 
 header .logo
 {
@@ -328,6 +337,10 @@ footer  p
 {
 
     header
+    {
+        padding: 15px 40px;
+    }
+    header.sticky
     {
         padding: 15px 40px;
     }

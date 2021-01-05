@@ -11,26 +11,30 @@
 </head>
 
 <body>
-    <section class="exercises">
-        <header>
-            <div class="logo">
-                <img src="images/logo3.png" width="110" height="75">
-            </div>
-            <div class="logo-text">
-                <p>Exercises</p>
-            </div>
-            <div class="toggleMenu" onclick="toggleMenu();"></div>
-            <ul class="navigation">
-                <li><a href="projekti.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="exercises.html">Exercises</a></li>
-                <li><a href="recipes.html">Recipes</a></li>
-            </ul>
-        </header>
+    <header>
+        <div class="logo">
+            <img src="images/logo3.png" width="110" height="75">
+        </div>
+        <div class="logo-text">
+            <p>Exercises</p>
+        </div>
+        <div class="toggleMenu" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+            <li><a href="projekti.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="exercises.html">Exercises</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </header>
+    <section class="banner" id="banner">
         <div class="content">
             <div class="contentBox">
-                <h2>EXERCISES CONTENT</h2>
+                <h2>Turn Fat into FIT!</h2>
+                <p>If you want to be a hit in life, you gotta be fit and fine.
+                    So be physically fit, you know you'll like it!!!
+                    Losing will never feel so good.
+                </p>
             </div>
         </div>
     </section>
@@ -81,12 +85,17 @@
     <br/>
     <br/>
     <script type="text/javascript">
-        function toggleMenu(){
+        function toggleMenu() {
             const toggleMenu = document.querySelector('.toggleMenu');
             const navigation = document.querySelector('.navigation');
             toggleMenu.classList.toggle('active');
             navigation.classList.toggle('active');
         }
+
+        window.addEventListener('scroll', function(){
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
     </script>
     <footer>
         <div class="container">
