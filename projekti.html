@@ -83,7 +83,7 @@
                     <a href="#"><img src="images/healthySoup.jpg"></a>
                 </div>
                 <div class="text">
-                    <h3>Special Soups</h3>
+                    <h3>Special Soup</h3>
                 </div>
             </div>
             <div class="box">
@@ -122,6 +122,33 @@
         <div class="title">
             <a href="recipes.html" class="btn">View All</a>
         </div> 
+    </section>
+
+    <section class="contact-section" id="contact-section">
+        <script>
+            $(document).ready(function(){
+                $(".inputBoxBtn").click(function(){
+                    $(".input, .inputBox"),val("");
+                });
+            });
+        </script>
+        <div class="title white">
+            <h2 class="title-text"><span>C</span>ontact Us</h2>
+            <p>If you have anything to ask, feel free to send us an email.</p>
+        </div> 
+        <div class="contactForm">
+            <h3>Send Message</h3>
+            <div class="inputBox">
+                <input type="text" class="input" placeholder="Name">
+            </div>
+            <div class="inputBox">
+                <input type="text" class="input" placeholder="Email">
+            </div>
+            <div class="inputBox">
+                <textarea placeholder="Message. . ."></textarea>
+            </div>
+            <div class="inputBoxBtn">Send</div>
+        </div>
     </section>
 
     <script type="text/javascript">

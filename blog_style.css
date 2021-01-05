@@ -4,12 +4,23 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    scroll-behavior: smooth;
 }
-body
+
+.banner
 {
-    margin: 0;
-    background-color: #f1f1f1;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url(images/running1.jpg); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+
 header
 {
     position: fixed;
@@ -20,9 +31,9 @@ header
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #444;
     z-index: 999;
 }
+
 header.sticky
 {
     position: fixed;
@@ -80,7 +91,7 @@ header .navigation li a:hover
     color: #04b8f5;
 }
 
-.content
+.content .contentBox
 {
     max-width: 600px;
 }
@@ -99,6 +110,7 @@ header .navigation li a:hover
     font-weight: 300;
     margin: 20px 0;
 }
+
 /*---------------------------------------*/
 
 section

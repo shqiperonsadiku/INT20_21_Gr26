@@ -98,9 +98,10 @@ header .navigation li a:hover
 
 .content .contentBox h2
 {
-    font-size: 4em;
+    font-size: 3em;
     color: #fff;
     line-height: 1em;
+    text-align: center;
 }
 
 .content .contentBox p
@@ -109,6 +110,7 @@ header .navigation li a:hover
     color: #fff;
     font-weight: 300;
     margin: 20px 0;
+    text-align: center;
 }
 /* ----------------------------------------------------------------------- */
 
