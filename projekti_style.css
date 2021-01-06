@@ -1,3 +1,77 @@
+
+:root {
+    --clr-light: #f1f1f1;
+    --clr-dark: #111;
+    --clr-primary: #dbffa2;
+    --clr-secondary: rgba(0, 0, 0, 0.5);
+    --clr-accent: #fff;
+  
+    --foreground: var(--clr-dark);
+    --background: var(--clr-light);
+    --shadow: var(--clr-secondary);
+    --contactBackground: var(--clr-accent);
+  
+    --ff-title: "Playfair Display", serif;
+    --ff-body: "Assistant", sans-serif;
+  }
+  
+  .darkmode {
+    --clr-light: #f1f1f1;
+    --clr-dark: #111;
+    --clr-primary: #dbffa2;
+    --clr-secondary:  rgba(0, 0, 0, 0.5);
+    --clr-accent: #ff7750;
+  
+    --foreground: var(--clr-light);
+    --background: var(--clr-dark);
+    --shadow:  var(--clr-primary);
+    --contactBackground: var(--clr-dark);
+  }
+  
+  /* body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--ff-body);
+    font-size: 18px;
+    line-height: 1.6;
+  } */
+  
+  h1 {
+    font-size: calc(3rem + 7vw);
+    font-family: var(--ff-title);
+    margin: 0 0 0.25em;
+    line-height: 1;
+  }
+  
+  .intro {
+    height: 80vh;
+    padding: 10em 0;
+    display: grid;
+    grid-template-columns: minmax(2em, 1fr) minmax(80vw, 860px) minmax(2em, 1fr);
+    background: linear-gradient(120deg, var(--clr-primary), var(--clr-secondary));
+    align-content: center;
+  }
+  
+  .intro > * {
+    grid-column: 2 / 3;
+  }
+  
+  .dark-mode-toggle {
+    position: absolute;
+    z-index: 100;
+    top: 1em;
+    right: 1em;
+    color: var(--foreground);
+    border: 2px solid currentColor;
+    padding: 4px;
+    background: white;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+  }
+
+/* -------------------------------------------------------------------------------------- */
 *
 {
     margin: 0;
@@ -116,11 +190,11 @@ section
 {
     padding: 100px;
     justify-content: flex-start;
-    background-color: #f1f1f1;
+    background-color: var(--background);
 }
 .title-text
 {
-    color: #111;
+    color: var(--foreground);
     font-size: 2em;
     font-weight: 300;
     text-align: left;
@@ -133,6 +207,7 @@ section
 }
 .col50 p
 {
+    color: var(--foreground);
     text-align: left;
 }
 .row
@@ -163,6 +238,8 @@ section
     object-fit: cover;
 
 }
+
+/* RECIPES section*/
 .btn 
 {
     font-size: 1em;
@@ -181,7 +258,7 @@ section
     letter-spacing: 6px; 
 }
 
-/* RECIPES section*/
+
 .title 
 {
     width: 100%;
@@ -204,7 +281,7 @@ section
     width: 340px;
     margin: 20px;
     border: 15px solid #fff;
-    box-shadow: 0 5px 35px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 35px var(--shadow);
 }
 .recipes .content .box .imgBx
 {
@@ -229,7 +306,7 @@ section
 .recipes .content .box .text h3
 {
     font-weight: 400;
-    color: #111;
+    color: var(--foreground);
     text-align: left;
 }
 
@@ -242,7 +319,7 @@ section
 }
 
 /*CONTACT US section*/
-/*
+
 .contact-section
 {
     background:url(images/contact-background.jpg);
@@ -252,14 +329,14 @@ section
 .contactForm
 {
     padding: 75px 50px;
-    background: #fff;
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    background: var(--contactBackground);
+    box-shadow: 0 15px 50px var(--shadow);
     max-width: 500px;
     margin-top: 50px;
 }
 .contactForm h3
 {
-    color: #111;
+    color: var(--foreground);
     font-size: 1.2em;
     margin-bottom: 20px;
     font-weight: 500;
@@ -277,12 +354,13 @@ section
     width: 100%;
     border: 1px solid #555;
     padding: 10px;
-    color: #111;
+    color: var(--foreground);
     outline: none;
     font-size: 16px;
     font-weight: 300;
+    background-color: var(--background);
 }
-.contactForm .inputBoxBtn 
+.contactForm .inputBox input[type="submit"] 
 {
     font-size: 1em;
     color: #fff;

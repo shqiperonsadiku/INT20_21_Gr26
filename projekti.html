@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="D:\GitDesktop\INT20_21_Gr26\projekti_style.css" rel="stylesheet" type="text/css">
-    <link href="D:\GitDesktop\INT20_21_Gr26\projekti.js" rel="stylesheet" type="text/javascript">
     <title>Health & Fitness</title>
     <link rel="icon" type="image/jpg" href="images/logo1.png" />
 </head>
@@ -28,6 +27,15 @@
             <li><a href="blog.html">Blog</a></li>
             <li><a href="#" class="button-bmi" id="button-bmi">BMI Calculator</a></li>
         </ul>
+        <button id="dark-mode-toggle" class="dark-mode-toggle">
+            <svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496">
+                <path fill="currentColor"
+                    d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z"
+                    transform="translate(-8 -8)" />
+            </svg>
+        </button>
+        
+        <script src="D:\GitDesktop\INT20_21_Gr26\dark-mode.js"></script>
     </header>
     <section class="banner" id="banner">
         <div class="content">
@@ -46,12 +54,12 @@
                 <h2 class="title-text"><span>A</span>bout Us</h2>
                 <p>some text some text some text some text some text
                     some text some text some textsome text some text some text
-                    some text some text some text some text some text some text 
+                    some text some text some text some text some text some text
                     some text some text some text some text some text some text
                     some text some text some text some text some text some text.<br><br>
                     some text some text some text some text some text
                     some text some text some textsome text some text some text
-                    some text some text some text some text some text some text 
+                    some text some text some text some text some text some text
                     some text some text some text some text some text some text
                     some text some text some text some text some text some text.
                 </p>
@@ -121,36 +129,32 @@
         </div>
         <div class="title">
             <a href="recipes.html" class="btn">View All</a>
-        </div> 
-    </section>
-    <!--
-    <section class="contact-section" id="contact-section">
-        <script>
-            $(document).ready(function(){
-                $(".inputBoxBtn").click(function(){
-                    $(".input, .inputBox"),val("");
-                });
-            });
-        </script>
-        <div class="title white">
-            <h2 class="title-text"><span>C</span>ontact Us</h2>
-            <p>If you have anything to ask, feel free to send us an email.</p>
-        </div> 
-        <div class="contactForm">
-            <h3>Send Message</h3>
-            <div class="inputBox">
-                <input type="text" class="input" placeholder="Name">
-            </div>
-            <div class="inputBox">
-                <input type="text" class="input" placeholder="Email">
-            </div>
-            <div class="inputBox">
-                <textarea placeholder="Message. . ."></textarea>
-            </div>
-            <div class="inputBoxBtn">Send</div>
         </div>
     </section>
-    -->
+
+    <section class="contact-section" id="contact-section">
+        <div class="title">
+            <h2 class="title-text"><span>C</span>ontact Us</h2>
+            <p>If you have anything to ask, feel free to send us an email.</p>
+        </div>
+        <div class="contactForm">
+            <form id="contactForm" method="post" action="contact.php"></form>
+            <h3>Send Message</h3>
+            <div class="inputBox">
+                <input name="name" type="text" class="input" placeholder="Your Name">
+            </div>
+            <div class="inputBox">
+                <input name="email" type="email" class="input" placeholder="Your Email" required>
+            </div>
+            <div class="inputBox">
+                <textarea name="message" placeholder="Message. . ." required></textarea>
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Send">
+            </div>
+        </div>
+    </section>
+
     <script type="text/javascript">
         function toggleMenu() {
             const toggleMenu = document.querySelector('.toggleMenu');
@@ -159,7 +163,7 @@
             navigation.classList.toggle('active');
         }
 
-        window.addEventListener('scroll', function(){
+        window.addEventListener('scroll', function () {
             const header = document.querySelector('header');
             header.classList.toggle("sticky", window.scrollY > 0);
         });
