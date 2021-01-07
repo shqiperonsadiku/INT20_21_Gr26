@@ -16,10 +16,10 @@
             <img src="images/logo3.png" width="110" height="75">
         </div>
         <div class="logo-text">
-            <p>Health and Fitness</p>
+            <h2>Health and Fitness</h2>
         </div>
         <div class="toggleMenu" onclick="toggleMenu();"></div>
-        <ul class="navigation">
+        <ul class="navigation" id="navigation">
             <li><a href="#banner">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#recipes">Recipes</a></li>
@@ -27,6 +27,19 @@
             <li><a href="blog.html">Blog</a></li>
             <li><a href="#" class="button-bmi" id="button-bmi">BMI Calculator</a></li>
         </ul>
+        <script type="text/javascript">
+            function toggleMenu() {
+                const toggleMenu = document.querySelector('.toggleMenu');
+                const navigation = document.querySelector('.navigation');
+                toggleMenu.classList.toggle('active');
+                navigation.classList.toggle('active');
+            }
+  
+            window.addEventListener('scroll', function () {
+                const header = document.querySelector('header');
+                header.classList.toggle("sticky", window.scrollY > 0);
+            });
+        </script>
     </header>
     <section class="banner" id="banner">
         <div class="content">
@@ -44,7 +57,7 @@
                     d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z"
                     transform="translate(-8 -8)" />
             </svg>
-        </button>    
+        </button>
         <script src="D:\GitDesktop\INT20_21_Gr26\dark-mode.js"></script>
     </section>
     <section class="about" id="about">
@@ -79,7 +92,7 @@
         <div class="content">
             <div class="box">
                 <div class="imgBx">
-                    <a href="#"><img src="images/recipes.jpg"></a>
+                    <a href="recipesBlogPost.html"><img src="images/recipes.jpg"></a>
                 </div>
                 <div class="text">
                     <h3>Tasty Salad</h3>
@@ -87,7 +100,7 @@
             </div>
             <div class="box">
                 <div class="imgBx">
-                    <a href="#"><img src="images/healthySoup.jpg"></a>
+                    <a href="recipesBlogPost.html"><img src="images/healthySoup.jpg"></a>
                 </div>
                 <div class="text">
                     <h3>Special Soup</h3>
@@ -95,7 +108,7 @@
             </div>
             <div class="box">
                 <div class="imgBx">
-                    <a href="#"><img src="images/healthyPasta.jpg"></a>
+                    <a href="recipesBlogPost.html"><img src="images/healthyPasta.jpg"></a>
                 </div>
                 <div class="text">
                     <h3>Healthy Pasta</h3>
@@ -103,7 +116,7 @@
             </div>
             <div class="box">
                 <div class="imgBx">
-                    <a href="#"><img src="images/healthySushi.jpg"></a>
+                    <a href="recipesBlogPost.html"><img src="images/healthySushi.jpg"></a>
                 </div>
                 <div class="text">
                     <h3>Sushi</h3>
@@ -111,7 +124,7 @@
             </div>
             <div class="box">
                 <div class="imgBx">
-                    <a href="#"><img src="images/healthySmoothie.jpg"></a>
+                    <a href="recipesBlogPost.html"><img src="images/healthySmoothie.jpg"></a>
                 </div>
                 <div class="text">
                     <h3>Healthy Smoothie</h3>
@@ -119,7 +132,7 @@
             </div>
             <div class="box">
                 <div class="imgBx">
-                    <a href="#"><img src="images/healthyFruitSalad.jpg"></a>
+                    <a href="recipesBlogPost.html"><img src="images/healthyFruitSalad.jpg"></a>
                 </div>
                 <div class="text">
                     <h3>Helthy Fruit Salad</h3>
@@ -194,20 +207,6 @@
             </div>
         </div>
     </section>
-
-    <script type="text/javascript">
-        function toggleMenu() {
-            const toggleMenu = document.querySelector('.toggleMenu');
-            const navigation = document.querySelector('.navigation');
-            toggleMenu.classList.toggle('active');
-            navigation.classList.toggle('active');
-        }
-
-        window.addEventListener('scroll', function () {
-            const header = document.querySelector('header');
-            header.classList.toggle("sticky", window.scrollY > 0);
-        });
-    </script>
     <div class="pop-up-bmi">
         <script type="text/javascript">
             function BMI() {
@@ -228,7 +227,7 @@
             <div class="bmi-calculator">
                 <div class="close">+</div>
                 <h2>BMI Calculator</h2>
-                <br />
+                <br/>
                 <p class="text">Height: </p>
                 <input type="text" id="h">
                 <p class="text">Weight: </p>
@@ -238,6 +237,8 @@
                 <br>
                 <p id="result"></p>
                 <button id="btn" onClick="BMI()">Calculate</button>
+                <br>
+                <br>
                 <p id="info">Please enter height [cm] and weight [kg]</p>
             </div>
             <script>

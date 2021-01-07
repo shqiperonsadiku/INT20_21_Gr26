@@ -42,6 +42,7 @@ header.sticky
     background: #444;
     padding: 5px 100px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: 1000ms;
 }
 
 header .logo
