@@ -22,7 +22,7 @@ body
     --clr-resultBmi: #341f97;
     --clr-postText: #000;
     --clr-sidebar: #ecdfdf;
-
+    --clr-copyright:#191919;
   
     --foreground: var(--clr-dark);
     --background: var(--clr-light);
@@ -35,6 +35,8 @@ body
     --postBackground: var(--clr-accent);
     --contentBackground: var(--clr-light);
     --sidebar: var(--clr-sidebar);
+    --footer: var(--clr-dark);
+    --copyright: var(--clr-copyright);
 
     --ff-title: "Playfair Display", serif;
     --ff-body: "Assistant", sans-serif;
@@ -49,6 +51,7 @@ body
     --clr-accent: #ff7750;
     --clr-postText: #000;
     --clr-darkSidebar: #333;
+    --clr-copyright: #060606;
   
     --foreground: var(--clr-light);
     --background: var(--clr-dark);
@@ -61,6 +64,8 @@ body
     --postBackground: var(--clr-postText);
     --contentBackground: var(--clr-lighDark);
     --sidebar: var(--clr-darkSidebar);
+    --footer: var(--clr-postText);
+    --copyright: var(--clr-copyright);
   }
   
   h1 {
@@ -96,8 +101,8 @@ body
     border-radius: 5px;
     width: 40px;
     height: 40px;
-    margin-top: 690px;
-    margin-right: 1500px;
+    margin-top: 720px;
+    margin-right: 1520px;
   }
 
   /*Header-i*/
@@ -111,7 +116,7 @@ header
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #444;
+    background: var(--copyright);
     z-index: 999;
 }
 
@@ -221,13 +226,23 @@ header .navigation li a:hover
 .content .main-content .post-image
 {
     justify-content: center;
+    align-items: center;
     width: 100%;
     height: 60vh;
     background: url(images/healthySoup.jpg);
     background-size: cover;
     background-position: center;
 }
-
+.content .main-content .post-image1
+{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+    background: url(images/recipes.jpg);
+    background-size: cover;
+    background-position: center;
+}
 .content .sidebar
 {
     width: 30%;
@@ -322,6 +337,34 @@ header .navigation li a:hover
     z-index: 1;
     box-shadow: 0 7px 40px var(--foreground);
     cursor: pointer;
+}
+
+/* SOCIAL MEDIA SIDEBAR */
+.content .sidebar .social-media
+{
+    justify-content: space-evenly;
+}
+.content .sidebar .social-media  .section-title
+{
+    color: var(--foreground);
+}
+.content .sidebar .social-media ul 
+{
+    width: 60px;
+    display: block;
+    padding: 10px;
+}
+.content .sidebar .social-media ul li
+{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+.content .sidebar .social-media ul li a .social-mediaUsername
+{
+    margin-left: 35px;
+    margin-bottom: 50px;
+    font-weight: 200;
 }
 /* --------------------------------------------------- */
 
@@ -463,7 +506,7 @@ footer
     width: 100%;
     height: auto;
     padding: 50px 100px;
-    background: #111;
+    background: var(--footer);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -578,7 +621,7 @@ footer  p
 .copyrightText
 {
     width: 100%;
-    background: #191919;
+    background: var(--copyright);
     padding: 8px 100px;
     text-align: left; 
     color: #999;
@@ -720,8 +763,8 @@ footer  p
         border-radius: 5px;
         width: 30px;
         height: 30px;
-        margin-top: 600px;
-        margin-right: 430px;
+        margin-top: 700px;
+        margin-right: 800px;
         z-index: 16;
     }
     footer

@@ -16,6 +16,9 @@
     --clr-bmishadow: #ee5253;
     --clr-inputBmi: #222f3e;
     --clr-resultBmi: #341f97;
+    --clr-postText: #000;
+    --clr-sidebar: #ecdfdf;
+    --clr-copyright:#191919;
   
     --foreground: var(--clr-dark);
     --background: var(--clr-light);
@@ -24,18 +27,27 @@
     --contactBackground: var(--clr-accent);
     --inputColorBmi: var(--clr-inputBmi);
     --resultBmi: var(--clr-resultBmi);
-  
+    --postText: var(--clr-postText);
+    --postBackground: var(--clr-accent);
+    --contentBackground: var(--clr-light);
+    --sidebar: var(--clr-sidebar);
+    --footer: var(--clr-dark);
+    --copyright: var(--clr-copyright);
+
     --ff-title: "Playfair Display", serif;
     --ff-body: "Assistant", sans-serif;
   }
   
-  .darkmode 
-  {
+  .darkmode {
     --clr-light: #f1f1f1;
     --clr-dark: #111;
+    --clr-lighDark: #222;
     --clr-primary: #dbffa2;
     --clr-secondary:  rgba(0, 0, 0, 0.5);
     --clr-accent: #ff7750;
+    --clr-postText: #000;
+    --clr-darkSidebar: #333;
+    --clr-copyright: #060606;
   
     --foreground: var(--clr-light);
     --background: var(--clr-dark);
@@ -44,6 +56,12 @@
     --contactBackground: var(--clr-dark);
     --inputColorBmi: var(--clr-light);
     --resultBmi: var(--clr-light);
+    --postText: var(--clr-light);
+    --postBackground: var(--clr-postText);
+    --contentBackground: var(--clr-lighDark);
+    --sidebar: var(--clr-darkSidebar);
+    --footer: var(--clr-postText);
+    --copyright: var(--clr-copyright);
   }
   
   h1 {
@@ -102,7 +120,7 @@ header.sticky
     position: fixed;
     display: flex;
     justify-content: space-between;
-    background: #444;
+    background: var(--clr-copyright);
     padding: 5px 100px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     transition: 1000ms;
@@ -385,6 +403,10 @@ section
     background-size: cover;
     background-position: bottom;
 }
+.title p
+{
+    color: var(--foreground);
+}
 .contactForm
 {
     padding: 75px 50px;
@@ -412,6 +434,7 @@ section
 {
     width: 100%;
     border: 1px solid #555;
+    border-radius: 4px;
     padding: 10px;
     color: var(--foreground);
     outline: none;
@@ -427,8 +450,6 @@ section
     display: inline-block;
     text-transform: uppercase;
     text-decoration: none;
-    text-align: center;
-    letter-spacing: 2px;
     transition: 0.5s;
     max-width: 100px;
     font-weight: 500;
@@ -436,10 +457,18 @@ section
     cursor: pointer;
     padding: 10px 30px;
 }
+.contactForm .inputBox input[type="submit"]:hover
+{
+    background: #dd024b; 
+    transform: rotateY(0deg) scale(1.0);
+    box-shadow: 0 4px 10px var(--foreground);
+    cursor: pointer;
+    margin-left: 10px;
+} 
 .contactForm .inputBoxBtn:hover
 {
-    background: #f71e66;
-    letter-spacing: 4px;
+    
+    letter-spacing: 2px;
 }
 /* --------------------------------------------------------------------------------------- */
 
@@ -582,7 +611,7 @@ footer
     width: 100%;
     height: auto;
     padding: 50px 100px;
-    background: #111;
+    background: var(--footer);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -697,7 +726,7 @@ footer  p
 .copyrightText
 {
     width: 100%;
-    background: #191919;
+    background: var(--copyright);
     padding: 8px 100px;
     text-align: left; 
     color: #999;
