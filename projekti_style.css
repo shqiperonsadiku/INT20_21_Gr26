@@ -282,6 +282,7 @@ section
     text-decoration: none;
     letter-spacing: 2px;
     transition: 0.5s;
+    border-radius: 3px;
 }
 .btn:hover
 {
