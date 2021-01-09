@@ -415,7 +415,7 @@ h2 span
     justify-content: left;
     align-items: left;
     padding-top: 40px;
-    padding-left: 20px;
+    padding-left: 40px;
     background: var(--background);
 }
 .heading h2
@@ -434,6 +434,7 @@ h2 span
 .line-container
 {
     padding:5px;
+    padding-bottom: 35px;
     background: var(--background);
 }
 .line-container .lines
@@ -473,6 +474,89 @@ h2 span
     background: var(--logo);
     background-size: cover;
     background-position: center;
+}
+/* --------------------------------------------------------------------------------------- */
+/* other workout section  style */
+.container1 .row 
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background: var(--background);
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.container1 .row .column-post
+{
+    width: 100%;
+    height: 100%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background: var(--background);
+    margin: 10px;
+}
+.container1 .row .column-post .blog
+{
+    background-color: var(--postBackground);
+    border: 10px solid var(--postBackground);
+    transition: 400ms;
+}
+.container1 .row .column-post .blog:hover
+{
+    transform: rotateY(0deg) scale(1.01);
+    z-index: 1;
+    box-shadow: 0 7px 10px var(--foreground);
+    cursor: pointer;
+    transition: 400ms;
+}
+.container1 .row .column-post .blog .blog-info p
+{
+    text-align: left;
+    opacity: 0.7;
+    line-height: 1.6;
+    color: var(--foreground);
+}
+.container1 .row .column-post .blog .imgBx
+{
+    width: 100%;
+    height: 100%;
+}
+.container1 .row .column-post .blog .imgBx img
+{
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+.container1 .row .column-post .blog .blog-info a
+{
+    text-decoration: none;
+    color: #0481f5;
+    margin-top: 20px;
+    font-weight: 600;
+    transition: 500ms;
+}
+.container1 .row .column-post .blog .blog-info a:hover
+{
+    letter-spacing: 1px;
+    color: #0450f5;
+    transition: 500ms;
+}
+.container1 .row .column-post .blog .blog-info
+{
+    padding: 20px;
+}
+.container1 .row .column-post .blog .blog-info h3
+{
+    font-size: 1.5rem;
+    margin: 10px 0;
+    text-transform: capitalize;
+    color: var(--foreground);
 }
 /* ---------------------------------------------------------------------- */
 .sectionCard
@@ -529,7 +613,7 @@ h2 span
     right: 0px;
     width: 400px;
     height: 300px;
-    background: #000;
+    background:var(--postBackground);
     display: inline-block;
     justify-content: center;
     align-items: center;
@@ -549,18 +633,25 @@ h2 span
 .card-container .card .card-content h2
 {
     font-size: 30px;
-    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--foreground);
 }
 .card-container .card .card-content p
 {
     margin-top: 10px;
-    color: #fff;
+    color: var(--foreground);
     padding-bottom: 20px;
+    opacity: 0.9;
 }
 .card-container .card .card-content a
 {
     text-decoration: none;
-    color: #fff;
+    color: var(--background);
+    font-weight: 500;
+}
+.card-container .card .card-content .btn
+{
+    background: var(--foreground);
 }
 .card-container .card .card-content .btn a
 {
@@ -606,15 +697,24 @@ footer
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
 footer .container
 {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     flex-direction: row;
 }
-
+.logo-footer
+{
+    padding: 50px 0px 50px 0px;
+    margin-right: 60px;
+}
+.logo-footer h2 
+{
+    color: #fff;
+}
 footer .container .sec
 {
     margin-right: 30px;
@@ -622,8 +722,7 @@ footer .container .sec
 
 footer .container .sec.aboutus
 {
-    width: 40%;
-    
+    width: 40%;   
 }
 
 footer .container h2
@@ -680,7 +779,10 @@ footer  p
     color: #fff;
     font-size: 20px;
 }
-
+.sec
+{
+    padding-left: 150px;
+}
 .contact
 {
     width: calc(35% - 60px);
@@ -730,16 +832,6 @@ footer  p
 }
 
 .copyrightText p a:hover
-{
-    color: #fff;
-}
-
-.logo-footer
-{
-    padding: 50px;
-    margin-right: 60px;
-}
-.logo-footer h2 
 {
     color: #fff;
 }
@@ -826,8 +918,13 @@ footer  p
     {
         flex-direction: column;
     }
+    footer .container .logo-footer
+    {
+        padding-left: 0;
+    }
     footer .container .sec
     {
+        padding-left: 0;
         margin-right: 0;
         margin-bottom: 40px;
     }
