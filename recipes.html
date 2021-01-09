@@ -24,20 +24,30 @@
             <li><a href="projekti.html">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="recipes.html">Recipes</a></li>
-            <li><a href="exercises.html">Exercises</a></li>
+            <li><a href="workouts.html">Workouts</a></li>
             <li><a href="blog.html">Blog</a></li>
         </ul>
     </header>
     <section class="banner" id="banner">
+        <video autoplay muted loop>
+            <source src="images/healthyVideo.mp4" type="video/mp4">
+        </video>
         <div class="content">
-            <div class="contentBox">
-                <h2>Healthy eating keeps the heart beating!</h2>
-                <p>Don't leave it later, start healthy eating right now!
-                    Start your journey of healthy eating, scroll
-                    down for the best healthy food recipes.
-                </p>
-            </div>
+            <h2>Healthy eating keeps the heart beating!</h2>
+            <p>Don't leave it later, start eating healthy right now!
+                Scroll down for the best healthy food recipes.
+            </p>
         </div>
+
+        <button id="dark-mode-toggle" class="dark-mode-toggle">
+            <svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496">
+                <path fill="currentColor"
+                    d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z"
+                    transform="translate(-8 -8)" />
+            </svg>
+        </button>
+        <script src="D:\GitDesktop\INT20_21_Gr26\dark-mode.js"></script>
+
     </section>
     <script type="text/javascript">
         function toggleMenu() {
@@ -47,11 +57,80 @@
             navigation.classList.toggle('active');
         }
 
-        window.addEventListener('scroll', function(){
+        window.addEventListener('scroll', function () {
             const header = document.querySelector('header');
             header.classList.toggle("sticky", window.scrollY > 0);
         });
     </script>
+
+    <section class="container1">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="heading">
+                    <h2>Latest Healthy Recipes</h2>
+                    <p>
+                        check out my latest blog post
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row1">
+            <div class="col-lg-4">
+                <div class="blog">
+                    <div class="imgBx">
+                    <img src="images/healthyPasta.jpg" alt="">
+                    </div>
+                    <div class="blog-info">
+                        <h3>Title Here</h3>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                            Dicta porro laborum asperiores veritatis dolores ex nihil impedit, 
+                            earum delectus beatae officia, eum culpa ut quis?
+                        </p>
+                        <br>
+                        <a href="workoutsBlogPost.html">read more</a>
+                    </div>
+                </div>
+            </div>   
+
+            <div class="col-lg-4">
+                <div class="blog">
+                    <div class="imgBx">
+                        <img src="images/healthySoup.jpg" alt="">
+                    </div>
+                    <div class="blog-info">
+                        <h3>Title Here</h3>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                            Dicta porro laborum asperiores veritatis dolores ex nihil impedit, 
+                            earum delectus beatae officia, eum culpa ut quis?
+                        </p>
+                        <br>
+                        <a href="workoutsBlogPost.html">read more</a>
+                    </div>
+                </div>
+            </div> 
+            <div class="col-lg-4">
+                <div class="blog">
+                    <div class="imgBx">
+                        <img src="images/healthySushi.jpg" alt="">
+                        </div>
+                    <div class="blog-info">
+                        <h3>Title Here</h3>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                            Dicta porro laborum asperiores veritatis dolores ex nihil impedit, 
+                            earum delectus beatae officia, eum culpa ut quis?
+                        </p>
+                        <br>
+                        <a href="workoutsBlogPost.html">read more</a>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </section>
     <footer>
         <div class="container">
             <div class="logo-footer">

@@ -99,6 +99,13 @@
     height: 40px;
     margin-top: 690px;
     margin-right: 1500px;
+    transition: 400ms;
+  }
+  .dark-mode-toggle:hover
+  {
+      width: 35px;
+      height: 35px;
+      transition: 400ms;
   }
 
 /*Header-i*/
@@ -267,7 +274,7 @@ section
 {
     font-size: 1em;
     color: #fff;
-    background-color: teal;
+    background-color: #008080;
     display: inline-block;
     padding: 10px 30px;
     margin-top: 20px;
@@ -279,6 +286,7 @@ section
 .btn:hover
 {
     letter-spacing: 6px; 
+    background-color: #026d6d;
 }
 
 .recipes .title p

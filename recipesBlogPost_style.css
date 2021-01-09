@@ -103,6 +103,13 @@ body
     height: 40px;
     margin-top: 720px;
     margin-right: 1520px;
+    transition: 400ms;
+  }
+  .dark-mode-toggle:hover
+  {
+      width: 35px;
+      height: 35px;
+      transition: 400ms;
   }
 
   /*Header-i*/

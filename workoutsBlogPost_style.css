@@ -103,6 +103,13 @@ body
     height: 40px;
     margin-top: 720px;
     margin-right: 1520px;
+    transition: 400ms;
+  }
+  .dark-mode-toggle:hover
+  {
+      width: 35px;
+      height: 35px;
+      transition: 400ms;
   }
 
   /*Header-i*/
@@ -419,6 +426,7 @@ header .navigation li a:hover
 
 .bmi-content #btn:hover {
     box-shadow: 1px 1px 10px #341f97;
+    letter-spacing: 1px;
 }
 
 .bmi-content #info 

@@ -28,6 +28,10 @@
         </ul>
     </header>
     <section class="banner" id="banner">
+        <video autoplay muted loop>
+            <source src="images/runningVideo.mp4" type="video/mp4">
+        </video>
+        <div class="content">
         <h2 class="be-text" id="be-text">Be
             <span style="display: initial;">Strong...</span>
             <span>Creative...</span>
@@ -36,6 +40,7 @@
             <span>Awesome...</span>
             <span>Confident...</span>
         </h2>
+        </div>
         <script type="text/javascript">
             var text = document.getElementById('be-text');
             var word = text.getElementsByTagName('span');
@@ -47,7 +52,7 @@
                 i = (i + 1) % word.length;
                 word[i].style.display = 'initial';
             }
-            setInterval(rotator, 800);
+            setInterval(rotator, 900);
         </script>
         <button id="dark-mode-toggle" class="dark-mode-toggle">
             <svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496">
