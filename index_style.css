@@ -316,7 +316,7 @@ section
 {
     width: 340px;
     margin: 20px;
-    border: 15px solid #fff;
+    border: 10px solid #fff;
     /* box-shadow: 0 5px 35px var(--shadow); */
 }
 .recipes .content .box .imgBx
@@ -423,6 +423,22 @@ section
     box-shadow: 0 15px 50px var(--shadow);
     max-width: 500px;
     margin-top: 50px;
+}
+.contactForm p
+{
+    font-size: 13px;
+    color: var(--foreground);
+    text-align: left;
+    margin-bottom: 10px;
+}
+.contactForm p a
+{
+
+    color: var(--foreground);
+}
+.contactForm p .tickInput
+{
+    margin-left: 20px;
 }
 .contactForm h3
 {
@@ -539,7 +555,10 @@ section
     font-size: 12px;
     font-family: inherit;
 }
-
+.bmi-content input
+{
+    background: none;
+}
 .bmi-content #w, #h 
 {
     color: var(--inputColorBmi);
@@ -852,23 +871,7 @@ footer  p
         position: fixed;
         z-index: 1000;
     }
-    .dark-mode-toggle
-    {
-        position: fixed;
-        top: 1em;
-        right: 1em;
-        color: var(--foreground);
-        border: 2px solid currentColor;
-        padding: 4px;
-        background: transparent;
-        cursor: pointer;
-        border-radius: 5px;
-        width: 30px;
-        height: 30px;
-        margin-top: 600px;
-        margin-right: 430px;
-        z-index: 11;
-    }
+    
     footer
     {
         padding: 40px;

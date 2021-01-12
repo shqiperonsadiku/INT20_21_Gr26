@@ -339,6 +339,8 @@ header .navigation li a:hover
 }
 .container1 .row1 .col-lg-4 .blog
 {
+    width: 100%;
+    height: 100%;    
     background-color: var(--postBackground);
     border: 10px solid var(--postBackground);
     transition: 400ms;
@@ -351,23 +353,29 @@ header .navigation li a:hover
     cursor: pointer;
     transition: 400ms;
 }
+.container1 .row1 .col-lg-4 .blog .imgBx
+{
+    position: relative;
+    width: 100%;
+    height: 50vh;
+}
+.container1 .row1 .col-lg-4 .blog .imgBx img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container1 .row1 .col-lg-4 .blog .blog-info
+{
+    width: 100%;
+    padding: 20px;
+}
 .container1 .row1 .col-lg-4 .blog .blog-info p
 {
     text-align: left;
     opacity: 0.7;
     line-height: 1.6;
     color: var(--foreground);
-}
-.container1 .row1 .col-lg-4 .blog .imgBx
-{
-    width: 100%;
-    height: 100%;
-}
-.container1 .row1 .col-lg-4 .blog .imgBx img
-{
-    width: 100%;
-    height: 50vh;
-    object-fit: cover;
 }
 .container1 .row1 .col-lg-4 .blog .blog-info a
 {
@@ -376,16 +384,13 @@ header .navigation li a:hover
     margin-top: 20px;
     font-weight: 600;
     transition: 500ms;
+    height: 100%;
 }
 .container1 .row1 .col-lg-4 .blog .blog-info a:hover
 {
     letter-spacing: 1px;
     color: #0450f5;
     transition: 500ms;
-}
-.container1 .row1 .col-lg-4 .blog .blog-info
-{
-    padding: 20px;
 }
 .container1 .row1 .col-lg-4 .blog .blog-info h3
 {
