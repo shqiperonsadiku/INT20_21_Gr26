@@ -303,6 +303,11 @@ section
     align-items: center;
     flex-direction: column;
 }
+.title a
+{
+    font-weight: 600;
+}
+
 
 .recipes .content
 {
