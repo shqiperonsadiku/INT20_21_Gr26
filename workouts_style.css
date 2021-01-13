@@ -738,6 +738,14 @@ h2 span {
     background-color: var(--postBackground);
 }
 
+.workoutTable thead {
+    border: 6px solid var(--foreground);
+}
+
+.workoutTable tbody {
+    border: 6px solid var(--foreground);
+}
+
 .workoutTable thead tr th {
     text-align: center;
     height: 30px;

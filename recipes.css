@@ -453,8 +453,14 @@ header .navigation li a:hover {
     margin-bottom: 30px;
 }
 
+.weightlifting-heading {
+    background: #f57004;
+    height: 60px;
+    font-size: 1.2em;
+}
+
 .bulk-heading {
-    height: 35px;
+    height: 40px;
     font-size: 1.5em;
     font-weight: 700;
     border: 1px solid var(--foreground);
@@ -481,11 +487,19 @@ header .navigation li a:hover {
     background-color: #0ca586;
 }
 
+.dietTable thead {
+    border: 6px solid var(--foreground);
+}
+
+.dietTable tbody {
+    border: 6px solid var(--foreground);
+}
+
 .dietTable thead tr th {
     text-align: center;
     height: 30px;
     font-weight: 700;
-    border: 1px solid var(--foreground);
+    border: 3px solid var(--foreground);
 }
 
 .dietTable tbody tr td {
@@ -493,7 +507,7 @@ header .navigation li a:hover {
     text-align: center;
     height: 25px;
     font-weight: 600;
-    border: 1px solid var(--foreground);
+    border: 3px solid var(--foreground);
 }
 
 .dietTable thead tr {
