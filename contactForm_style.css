@@ -58,29 +58,6 @@ body {
     width: 100%;
 }
 
-.inputBox.success .input {
-    border-color: #2ecc71;
-}
-
-.inputBox.error .input {
-    border-color: #e74c3c;
-}
-
-.inputBox.success i.fa-check-circle {
-    color: #2ecc71;
-    visibility: visible;
-}
-
-.inputBox.error i.fa-exclamation-circle {
-    color: #e74c3c;
-    visibility: visible;
-}
-
-.inputBox.error small {
-    color: #e74c3c;
-    visibility: visible;
-}
-
 .inputBox i {
     visibility: hidden;
     position: absolute;
