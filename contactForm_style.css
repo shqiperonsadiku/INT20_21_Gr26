@@ -1,82 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)), url(images/contact-background.jpg);
+    background: url(images/contact-background.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
     font-family: sans-serif;
 }
 
+.contactForm {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 600px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
 .contact-title {
-    margin-top: 100px;
-    color: #fff;
-    text-transform: uppercase;
-    transition: all 4s ease-in-out;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 20px 40px;
 }
 
 .contact-title h2 {
-    font-size: 32px;
-    line-height: 10x;
+    margin: 0;
 }
 
-.contact-title p {
-    font-size: 16px;
-    font-weight: 500;
+.contactForm {
+    padding: 30px 40px;
 }
 
-.contactForm p {
-    color: #fff;
+.inputBox {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
 }
 
-.contactForm a {
-    color: #fff;
+.inputBox label {
+    display: inline-block;
+    margin-bottom: 5px;
 }
 
-form {
-    margin-top: 50px;
-    transition: all 4s ease-in-out;
-}
-
-.input {
-    width: 600px;
-    background: transparent;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid #f1f1f1;
-    color: #fff;
-    font-size: 18px;
-    margin-bottom: 16px;
-}
-
-.tickInput {
-    height: 13px;
-    margin-top: 4px;
-    margin-left: 20px;
-}
-
-input {
-    height: 45px;
-}
-
-form .inputBoxBtn {
-    background: #2256ff;
-    border-color: transparent;
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    height: 50px;
-    margin-top: 20px;
+.inputBox .input {
+    border: 2px solid #f0f0f0;
     border-radius: 4px;
-    width: 120px;
+    display: block;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
 }
 
-form .inputBoxBtn:hover {
-    background: #052fb9;
-    letter-spacing: 3px;
-    margin-left: 10px;
-    transform: rotateY(0deg) scale(1.0);
-    box-shadow: 0 4px 10px #f1f1f1;
+.inputBox.success .input {
+    border-color: #2ecc71;
+}
+
+.inputBox.error .input {
+    border-color: #e74c3c;
+}
+
+.inputBox.success i.fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.inputBox.error i.fa-exclamation-circle {
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.inputBox.error small {
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.inputBox i {
+    visibility: hidden;
+    position: absolute;
+    top: 37px;
+    right: 10px;
+}
+
+.inputBox small {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+form p a {
+    color: #111;
+}
+
+form p a:hover {
+    color: black;
+}
+
+.inputBoxBtn {
+    background-color: #078bb8;
+    border: 2px solid #07779c;
+    color: #fff;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 16px;
+    width: 100%;
     cursor: pointer;
+    transition: 400ms;
+}
+
+.inputBoxBtn:hover {
+    background-color: #035975;
+    border: 2px solid #056383;
+    letter-spacing: 1px;
+    transition: 400ms;
 }

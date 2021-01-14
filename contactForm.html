@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <link href="D:\GitDesktop\INT20_21_Gr26\contactForm_style.css" rel="stylesheet" type="text/css">
+    <link href="contactForm_style.css" rel="stylesheet" type="text/css">
     <title>Contact | Health & Fitness</title>
     <link rel="icon" type="image/jpg" href="images/logo1.png" />
     <script>
@@ -40,6 +40,10 @@
                 alert("Please check the Terms and Conditions box!");
                 flag = false;
             }
+            if (document.contactForm.message.value == false) {
+                alert("Please write something in message section!");
+                flag = false;
+            }
 
             return flag;
         }
@@ -47,31 +51,33 @@
 </head>
 
 <body>
-    <div class="contact-title">
-        <h2 class="title-text"><span>C</span>ontact Us</h2>
-        <p>If you have something to ask us, feel free to send us an email</p>
-    </div>
     <div class="contactForm">
+        <div class="contact-title">
+            <h2 class="title-text"><span>C</span>ontact Us</h2>
+        </div>
         <form id="contactForm" name="contactForm" method="post" action="contact.php" onsubmit="return formValidation();">
             <div class="inputBox">
-                <input name="name" type="text" class="input" placeholder="Your Name">
+                <label>Name</label>
+                <input name="name" id="name" type="text" class="input" placeholder="Your Name">
             </div>
             <div class="inputBox">
-                <input name="email" type="email" class="input" placeholder="Your Email" required>
+                <label>Email</label>
+                <input name="email" id="email" type="email" class="input" placeholder="Your Email">
             </div>
             <div class="inputBox">
-                <input name="subject" type="text" class="input" placeholder="Subject...">
+                <label>Subject</label>
+                <input name="subject" type="text" class="input" placeholder="Optional">
             </div>
             <div class="inputBox">
                 <textarea name="message" class="input" placeholder="Message. . ." required></textarea>
             </div>
             <p>Check the box if you agree with our
-                <a href="D:\GitDesktop\INT20_21_Gr26\termsConditons.html" target="_blank">Terms and Conditions</a> and
-                <a href="D:\GitDesktop\INT20_21_Gr26\termsConditons.html" target="_blank">Privacy & Policy</a>
+                <a href="termsConditons.html" target="_blank">Terms and Conditions</a> and
+                <a href="privacyPolicy.html" target="_blank">Privacy & Policy</a>
                 <input class="tickInput" type="checkbox" name="termsAndConditions" value="Yes"> Yes
             </p>
             <div class="inputBox">
-                <input class="inputBoxBtn" type="submit" value="send" onclick="submitClick();">
+                <input class="inputBoxBtn" id="submit" type="submit" value="send" onclick="submitClick();">
             </div>
         </form>
     </div>
