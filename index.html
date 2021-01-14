@@ -30,12 +30,15 @@
                 alert("Enter alphabetic characters as Name!");
                 flag = false;
             }
-
-            // Validate emails
-            if (!(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).test(contactForm.email.value)) //Regular expressions to validate email
+            if (document.contactForm.email.value == false) {
+                alert("Email cannot be blank!");
+                flag = false;
+            } else if (!(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).test(contactForm.email.value)) //Regular expressions to validate email
             {
+                // Validate emails
                 alert("Enter Valid Email Address!");
                 flag = false;
+
             }
 
             if (document.contactForm.termsAndConditions.checked == false) {
@@ -243,7 +246,8 @@
                     <textarea name="message" placeholder="Message. . ." required></textarea>
                 </div>
                 <p>Check the box if you agree with our
-                    <a href="termsConditons.html" target="_blank">Terms and Conditions</a>:
+                    <a href="termsConditons.html" target="_blank">Terms and Conditions</a> and
+                    <a href="privacyPolicy.html" target="_blank">Privacy & Policy</a>
                     <input class="tickInput" type="checkbox" name="termsAndConditions" value="Yes"> Yes
                 </p>
                 <div class="inputBox">
