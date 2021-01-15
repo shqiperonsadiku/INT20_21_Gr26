@@ -6,6 +6,12 @@
     scroll-behavior: smooth;
 }
 
+@font-face {
+    font-family: 'myfont';
+    src: url(fonts/Raleway-SemiBold.ttf);
+    font-style: normal;
+}
+
 html,
 body {
     height: 100%;
@@ -172,6 +178,7 @@ header .navigation li a {
     display: inline-block;
     color: #fff;
     margin-right: 40px;
+    font-family: myfont;
     text-decoration: none;
 }
 

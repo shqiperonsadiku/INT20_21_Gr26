@@ -1,10 +1,15 @@
-*
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
     scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'myfont';
+    src: url(fonts/Raleway-SemiBold.ttf);
+    font-style: normal;
 }
 
 :root {
@@ -18,8 +23,7 @@
     --clr-resultBmi: #341f97;
     --clr-postText: #000;
     --clr-sidebar: #ecdfdf;
-    --clr-copyright:#191919;
-  
+    --clr-copyright: #191919;
     --foreground: var(--clr-dark);
     --background: var(--clr-light);
     --shadow: var(--clr-secondary);
@@ -33,25 +37,23 @@
     --sidebar: var(--clr-sidebar);
     --footer: var(--clr-dark);
     --copyright: var(--clr-copyright);
-
     --ff-title: "Playfair Display", serif;
     --ff-body: "Assistant", sans-serif;
-  }
-  
-  .darkmode {
+}
+
+.darkmode {
     --clr-light: #f1f1f1;
     --clr-dark: #111;
     --clr-lighDark: #222;
     --clr-primary: #dbffa2;
-    --clr-secondary:  rgba(0, 0, 0, 0.5);
+    --clr-secondary: rgba(0, 0, 0, 0.5);
     --clr-accent: #ff7750;
     --clr-postText: #000;
     --clr-darkSidebar: #333;
     --clr-copyright: #060606;
-  
     --foreground: var(--clr-light);
     --background: var(--clr-dark);
-    --shadow:  var(--clr-primary);
+    --shadow: var(--clr-primary);
     --shadowBmi: var(--clr-primary);
     --contactBackground: var(--clr-dark);
     --inputColorBmi: var(--clr-light);
@@ -62,29 +64,29 @@
     --sidebar: var(--clr-darkSidebar);
     --footer: var(--clr-postText);
     --copyright: var(--clr-copyright);
-  }
-  
-  h1 {
+}
+
+h1 {
     font-size: calc(3rem + 7vw);
     font-family: var(--ff-title);
     margin: 0 0 0.25em;
     line-height: 1;
-  }
-  
-  .intro {
+}
+
+.intro {
     height: 80vh;
     padding: 10em 0;
     display: grid;
     grid-template-columns: minmax(2em, 1fr) minmax(80vw, 860px) minmax(2em, 1fr);
     background: linear-gradient(120deg, var(--clr-primary), var(--clr-secondary));
     align-content: center;
-  }
-  
-  .intro > * {
+}
+
+.intro>* {
     grid-column: 2 / 3;
-  }
-  
-  .dark-mode-toggle {
+}
+
+.dark-mode-toggle {
     position: fixed;
     z-index: 1001;
     top: 1em;
@@ -100,17 +102,18 @@
     margin-top: 690px;
     margin-right: 1500px;
     transition: 400ms;
-  }
-  .dark-mode-toggle:hover
-  {
-      width: 35px;
-      height: 35px;
-      transition: 400ms;
-  }
+}
+
+.dark-mode-toggle:hover {
+    width: 35px;
+    height: 35px;
+    transition: 400ms;
+}
+
 
 /*Header-i*/
-header
-{
+
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -122,31 +125,29 @@ header
     z-index: 999;
 }
 
-header.sticky
-{
+header.sticky {
     position: fixed;
     display: flex;
     justify-content: space-between;
     background: var(--clr-copyright);
     padding: 5px 100px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
     transition: 1000ms;
 }
 
-header .logo
-{
+header .logo {
     position: relative;
     width: 100px;
     height: 5px;
     padding-bottom: 75px;
 }
-header .logo-text 
-{
+
+header .logo-text {
     position: fixed;
     padding-left: 100px;
 }
-header .logo-text h2
-{
+
+header .logo-text h2 {
     position: relative;
     font-size: 1.6em;
     color: #fff;
@@ -156,37 +157,35 @@ header .logo-text h2
     letter-spacing: 1px;
 }
 
-header .navigation
-{
+header .navigation {
     position: relative;
     display: flex;
 }
 
-header .navigation li
-{
+header .navigation li {
     list-style: none;
 }
 
-header .navigation li a
-{
-display: inline-block;
-color: #fff;
-margin-right: 40px;
-text-decoration: none;
+header .navigation li a {
+    display: inline-block;
+    color: #fff;
+    font-family: myfont;
+    margin-right: 40px;
+    text-decoration: none;
 }
 
-header .navigation li a:hover
-{
+header .navigation li a:hover {
     color: #04b8f5;
 }
 
+
 /*Section 1*/
-.banner
-{
+
+.banner {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: url(images/gymBackground2.jpg); 
+    background: url(images/gymBackground2.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -194,84 +193,83 @@ header .navigation li a:hover
     align-items: center;
 }
 
-
-.content .contentBox
-{
+.content .contentBox {
     max-width: 600px;
 }
 
-.content .contentBox h2
-{
+.content .contentBox h2 {
     font-size: 4em;
     color: #fff;
     line-height: 1em;
 }
 
-.content .contentBox p
-{
+.content .contentBox p {
     font-size: 1.1em;
     color: #fff;
     font-weight: 300;
     margin: 20px 0;
 }
 
+
 /*ABOUT US section*/
-section  
-{
+
+section {
     padding: 100px;
     justify-content: flex-start;
     background-color: var(--background);
 }
-.title-text
-{
+
+.title-text {
     color: var(--foreground);
     font-size: 2em;
     font-weight: 300;
+    font-family: myfont;
     text-align: left;
 }
-.title-text span
-{
+
+.title-text span {
     color: #1388af;
     font-weight: 700;
     font-size: 1.5em;
 }
-.col50 p
-{
+
+.col50 p {
     color: var(--foreground);
+    font-family: myfont;
     text-align: left;
 }
-.row
-{
+
+.row {
     position: relative;
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
-.row .col50
-{
+
+.row .col50 {
     position: relative;
     width: 48%;
 }
-.row .col50 .col50-img
-{
+
+.row .col50 .col50-img {
     position: relative;
     width: 100%;
-    min-height: 300px;   
+    min-height: 300px;
 }
-.row .col50 .col50-img img
-{
+
+.row .col50 .col50-img img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-
 }
 
+
 /* RECIPES section*/
-.btn 
-{
+
+.btn {
     font-size: 1em;
     color: #fff;
     background-color: #008080;
@@ -284,54 +282,52 @@ section
     transition: 0.5s;
     border-radius: 3px;
 }
-.btn:hover
-{
-    letter-spacing: 6px; 
+
+.btn:hover {
+    letter-spacing: 6px;
     background-color: #026d6d;
 }
 
-.recipes .title p
-{
+.recipes .title p {
     color: var(--foreground);
+    font-family: myfont;
+    letter-spacing: 0.5px;
 }
 
-.title 
-{
+.title {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.title a
-{
+
+.title a {
     font-weight: 600;
 }
 
-
-.recipes .content
-{
+.recipes .content {
     display: flex;
     justify-content: center;
     flex-direction: row-reverse;
     flex-wrap: wrap;
     margin-top: 40px;
 }
-.recipes .content .box 
-{
+
+.recipes .content .box {
     width: 340px;
     margin: 20px;
     border: 10px solid #fff;
     /* box-shadow: 0 5px 35px var(--shadow); */
 }
-.recipes .content .box .imgBx
-{
+
+.recipes .content .box .imgBx {
     position: relative;
     width: 100%;
     height: 300px;
 }
-.recipes .content .box .imgBx img
-{
+
+.recipes .content .box .imgBx img {
     position: absolute;
     top: 0;
     left: 0;
@@ -339,52 +335,52 @@ section
     height: 100%;
     object-fit: cover;
 }
-.recipes .content .box .text
-{
+
+.recipes .content .box .text {
     padding: 15px 0 5px;
 }
 
-.recipes .content .box .text h3
-{
+.recipes .content .box .text h3 {
     font-weight: 400;
     color: var(--foreground);
     text-align: left;
 }
 
-.content .box:hover
-{
+.content .box:hover {
     transform: rotateY(0deg) scale(1.15);
     z-index: 1;
     box-shadow: 0 7px 40px var(--foreground);
     cursor: pointer;
 }
 
+
 /*Workouts section*/
-.workouts .title p
-{
+
+.workouts .title p {
     color: var(--foreground);
+    font-family: myfont;
 }
-.workouts .content
-{
+
+.workouts .content {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-top: 40px; 
+    margin-top: 40px;
 }
-.workouts .content .box
-{
+
+.workouts .content .box {
     width: 250px;
     margin: 15px;
 }
-.workouts .content .box .imgBx
-{
+
+.workouts .content .box .imgBx {
     position: relative;
     width: 100%;
     height: 300px;
 }
-.workouts .content .box .imgBx img
-{
+
+.workouts .content .box .imgBx img {
     position: absolute;
     top: 0;
     left: 0;
@@ -392,76 +388,76 @@ section
     height: 100%;
     object-fit: cover;
 }
-.workouts .content .box .text
-{
+
+.workouts .content .box .text {
     padding: 15px 0 5px;
 }
-.workouts .content .box .text h3
-{
+
+.workouts .content .box .text h3 {
     font-weight: 400;
     color: var(--foreground);
 }
-.workouts .box:hover
-{
+
+.workouts .box:hover {
     transform: rotateY(0deg) scale(1.15);
     z-index: 1;
     box-shadow: 0 7px 40px var(--foreground);
     cursor: pointer;
 }
 
+
 /*CONTACT US section*/
 
-.contact-section
-{
-    background:url(images/contact-background.jpg);
+.contact-section {
+    background: url(images/contact-background.jpg);
     background-size: cover;
     background-position: bottom;
 }
-.title p
-{
+
+.title p {
     color: var(--foreground);
+    font-family: myfont;
 }
-.contactForm
-{
+
+.contactForm {
     padding: 75px 50px;
     background: var(--contactBackground);
     box-shadow: 0 15px 50px var(--shadow);
     max-width: 500px;
     margin-top: 50px;
 }
-.contactForm p
-{
+
+.contactForm p {
     font-size: 13px;
     color: var(--foreground);
     text-align: left;
     margin-bottom: 10px;
 }
-.contactForm p a
-{
 
+.contactForm p a {
     color: var(--foreground);
 }
-.contactForm p .tickInput
-{
+
+.contactForm p .tickInput {
     margin-left: 20px;
 }
-.contactForm h3
-{
+
+.contactForm h3 {
     color: var(--foreground);
     font-size: 1.2em;
     margin-bottom: 20px;
     font-weight: 500;
     text-align: left;
 }
-.contactForm .inputBox
-{
+
+.contactForm .inputBox {
     position: relative;
     width: 100%;
     margin-bottom: 20px;
 }
+
 .contactForm .inputBox input,
-.contactForm .inputBox textarea
-{
+.contactForm .inputBox textarea {
     width: 100%;
     border: 1px solid #555;
     border-radius: 4px;
@@ -472,8 +468,8 @@ section
     font-weight: 300;
     background-color: var(--background);
 }
-.contactForm .inputBox input[type="submit"] 
-{
+
+.contactForm .inputBox input[type="submit"] {
     font-size: 1em;
     color: #fff;
     background: #ff0157;
@@ -487,23 +483,23 @@ section
     cursor: pointer;
     padding: 10px 30px;
 }
-.contactForm .inputBox input[type="submit"]:hover
-{
-    background: #dd024b; 
+
+.contactForm .inputBox input[type="submit"]:hover {
+    background: #dd024b;
     transform: rotateY(0deg) scale(1.0);
     box-shadow: 0 4px 10px var(--foreground);
     cursor: pointer;
     margin-left: 10px;
-} 
-.contactForm .inputBoxBtn:hover
-{
-    
+}
+
+.contactForm .inputBoxBtn:hover {
     letter-spacing: 2px;
 }
+
+
 /* --------------------------------------------------------------------------------------- */
 
-.pop-up-bmi
-{
+.pop-up-bmi {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
@@ -516,26 +512,23 @@ section
     z-index: 1000;
 }
 
-.bmi-content{
+.bmi-content {
     width: 500px;
     height: 300px;
     background-color: var(--background);
     border-radius: 4px;
     position: relative;
-   
 }
 
-.bmi-content h2
-{
+.bmi-content h2 {
     font-size: 30px;
     font-weight: 600;
 }
 
-.bmi-content .text
- {
+.bmi-content .text {
     margin-top: 30px;
-	text-align: left;
-	margin-left: 30px;
+    text-align: left;
+    margin-left: 30px;
 }
 
 .bmi-content #btn {
@@ -555,17 +548,17 @@ section
     box-shadow: 1px 1px 10px #341f97;
 }
 
-.bmi-content #info 
-{
+.bmi-content #info {
     font-size: 12px;
     font-family: inherit;
 }
-.bmi-content input
-{
+
+.bmi-content input {
     background: none;
 }
-.bmi-content #w, #h 
-{
+
+.bmi-content #w,
+#h {
     color: var(--inputColorBmi);
     text-align: left;
     font-size: 20px;
@@ -576,31 +569,28 @@ section
     border-bottom: 1px solid #341f97;
     width: 200px;
     padding: 10px;
-}    
+}
 
-.bmi-content  #w:focus, #h:focus 
-{
+.bmi-content #w:focus,
+#h:focus {
     border-bottom: 2px solid #341f97;
     width: 300px;
     transition: 0.5s;
-}   
+}
 
-#result 
-{
+#result {
     color: var(--resultBmi);
-}   
+}
 
-body 
-{
+body {
     margin: 0;
     padding: 0;
     text-align: center;
     font-family: sans-serif;
     min-height: 100vh;
-}    
-    
-.bmi-calculator 
-{
+}
+
+.bmi-calculator {
     width: 500px;
     position: absolute;
     top: 50%;
@@ -611,16 +601,16 @@ body
     border-radius: 10px;
     box-shadow: 1px 1px 20px var(--shadowBmi);
 }
-.bmi-calculator h2
-{
-    color: var(--foreground);
-}    
-.bmi-calculator .text
-{
+
+.bmi-calculator h2 {
     color: var(--foreground);
 }
-.bmi-calculator .close
-{
+
+.bmi-calculator .text {
+    color: var(--foreground);
+}
+
+.bmi-calculator .close {
     position: absolute;
     top: 0;
     right: 14px;
@@ -629,8 +619,8 @@ body
     cursor: pointer;
     color: var(--foreground);
 }
-.bmi-calculator #info
-{
+
+.bmi-calculator #info {
     color: var(--foreground);
     font-size: 16px;
 }
@@ -638,8 +628,7 @@ body
 
 /* --------------------------------------------------------------------------------------- */
 
-footer
-{
+footer {
     position: relative;
     width: 100%;
     height: auto;
@@ -649,8 +638,8 @@ footer
     justify-content: space-between;
     flex-wrap: wrap;
 }
-footer .container
-{
+
+footer .container {
     width: 100%;
     height: 100%;
     display: flex;
@@ -658,59 +647,57 @@ footer .container
     flex-wrap: wrap;
     flex-direction: row;
 }
-.logo-footer
-{
+
+.logo-footer {
     padding: 50px 0px 50px 0px;
     margin-right: 60px;
 }
-.logo-footer h2 
-{
+
+.logo-footer h2 {
     color: #fff;
 }
-footer .container .sec
-{
+
+footer .container .sec {
     margin-right: 30px;
 }
 
-footer .container .sec.aboutus
-{
-    width: 40%;   
+footer .container .sec.aboutus {
+    width: 40%;
 }
 
-footer .container h2
-{
+footer .container h2 {
     text-align: left;
     position: relative;
     color: #fff;
     font-weight: 500;
     margin-bottom: 15px;
 }
-footer .container h2::before
-{
+
+footer .container h2::before {
     content: '';
     position: absolute;
-    bottom:  -5px;
+    bottom: -5px;
     left: 30;
     width: 50px;
     height: 2px;
     background: #f00;
 }
-footer  p
-{
+
+footer p {
     text-align: left;
     color: #999;
 }
-.sci
-{
+
+.sci {
     margin-top: 20px;
     display: flex;
 }
-.sci li 
-{
+
+.sci li {
     list-style: none;
 }
-.sci li a
-{
+
+.sci li a {
     display: inline-block;
     width: 40px;
     height: 40px;
@@ -722,114 +709,98 @@ footer  p
     text-decoration: none;
     border-radius: 4px;
 }
-.sci li a:hover
-{
+
+.sci li a:hover {
     background: #f00;
 }
-.sci li a .fa
-{
+
+.sci li a .fa {
     color: #fff;
     font-size: 20px;
 }
-.sec
-{
+
+.sec {
     padding-left: 150px;
 }
-.contact
-{
+
+.contact {
     width: calc(35% - 60px);
     margin-right: 10px !important;
 }
-.contact .info li 
-{
+
+.contact .info li {
     display: flex;
     margin-bottom: 16px;
 }
 
-.contact .info li span:nth-child(1)
-{
+.contact .info li span:nth-child(1) {
     color: #fff;
     font-size: 20px;
     margin-right: 10px;
 }
-.contact .info li span
-{
+
+.contact .info li span {
     color: #999;
 }
 
-.contact .info li a
-{
+.contact .info li a {
     color: #999;
     text-decoration: none;
 }
 
-.contact .info li a:hover
-{
+.contact .info li a:hover {
     color: #fff;
 }
 
-.copyrightText
-{
+.copyrightText {
     width: 100%;
     background: var(--copyright);
     padding: 8px 100px;
-    text-align: left; 
+    text-align: left;
     color: #999;
 }
 
-.copyrightText p a
-{
+.copyrightText p a {
     color: #999;
     padding-left: 20px;
 }
 
-.copyrightText p a:hover
-{
+.copyrightText p a:hover {
     color: #fff;
 }
 
-@media (max-width: 991px)
-{
-
-    header
-    {
+@media (max-width: 991px) {
+    header {
         padding: 15px 40px;
     }
-    header.sticky
-    {
+    header.sticky {
         padding: 15px 40px;
     }
-    header .logo-text 
-    {
-    position: fixed;
-    padding-left: 90px;
+    header .logo-text {
+        position: fixed;
+        padding-left: 90px;
     }
-    header .logo-text h2
-    {
+    header .logo-text h2 {
         font-size: 1.4em;
     }
-    .banner
-    {
+    .banner {
         padding: 40px;
         background: url(images/gymBackground2.jpg);
         background-size: cover;
         background-position: center;
     }
-    section{
+    section {
         padding: 40px;
         background-size: cover;
         background-position: center;
     }
-    .content .contentBox h2
-    {
-        font-size: 2.5em; 
+    .content .contentBox h2 {
+        font-size: 2.5em;
     }
-    .content .contentBox p
-    {
-        font-size: 1em; 
+    .content .contentBox p {
+        font-size: 1em;
     }
-    header .navigation
-    {
+    header .navigation {
         position: fixed;
         top: 0;
         left: 0;
@@ -842,17 +813,14 @@ footer  p
         align-items: center;
         flex-direction: column;
     }
-    header .navigation.active 
-    {
+    header .navigation.active {
         display: flex;
     }
-    header .navigation li a 
-    {
+    header .navigation li a {
         font-size: 24px;
         margin: 10px 0;
     }
-    .toggleMenu
-    {
+    .toggleMenu {
         position: relative;
         width: 30px;
         height: 30px;
@@ -863,47 +831,36 @@ footer  p
         cursor: pointer;
         z-index: 12;
     }
-    .toggleMenu.active
-    {
+    .toggleMenu.active {
         background: url(images/close.png);
         background-position: center;
         background-size: 25px;
         background-repeat: no-repeat;
     }
-
-    .pop-up-bmi
-    {
+    .pop-up-bmi {
         position: fixed;
         z-index: 1000;
     }
-    
-    footer
-    {
+    footer {
         padding: 40px;
     }
-    footer .container
-    {
+    footer .container {
         flex-direction: column;
     }
-    footer .container .logo-footer
-    {
+    footer .container .logo-footer {
         padding-left: 0;
     }
-    footer .container .sec
-    {
+    footer .container .sec {
         padding-left: 0;
         margin-right: 0;
         margin-bottom: 40px;
     }
     footer .container .logo-footer,
     .sec.aboutus,
-    .contact
-    {
+    .contact {
         width: 100%;
     }
-    .copyrightText
-    {
+    .copyrightText {
         padding: 8px 40px;
     }
-
 }

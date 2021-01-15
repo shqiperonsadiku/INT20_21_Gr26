@@ -2,6 +2,12 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'myfont';
+    src: url(fonts/Raleway-SemiBold.ttf);
+    font-style: normal;
+}
+
 body {
     background: url(images/contact-background.jpg);
     background-size: cover;
@@ -31,6 +37,7 @@ body {
 
 .contact-title h2 {
     margin: 0;
+    font-family: myfont;
 }
 
 .contactForm {
@@ -45,6 +52,7 @@ body {
 
 .inputBox label {
     display: inline-block;
+    font-family: myfont;
     margin-bottom: 5px;
 }
 
@@ -70,6 +78,10 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
+}
+
+form p {
+    font-family: myfont;
 }
 
 form p a {
