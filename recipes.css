@@ -223,6 +223,140 @@ header .navigation li a:hover {
 
 /* ----------------------------------------------------------------------- */
 
+.container0 {
+    background: var(--background);
+}
+
+.container0 .heading {
+    padding: 20px 0;
+}
+
+.container0 .heading h2 {
+    font-size: 2rem;
+    color: var(--foreground);
+    text-align: center;
+}
+
+.cs-hidden {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    background: var(--background);
+}
+
+.cs-hidden li {
+    width: 400px;
+    padding: 30px;
+}
+
+.slide-box {
+    width: 100%;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slide-img {
+    height: 450px;
+    position: relative;
+}
+
+.slide-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    box-sizing: border-box;
+}
+
+.detail-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background: var(--postBackground);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.slide-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-title a {
+    text-decoration: none;
+    color: var(--foreground);
+    margin: 5px 0px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding-right: 8px;
+}
+
+.slide-title span {
+    color: var(--foreground);
+    opacity: 0.8;
+}
+
+.overlay {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(92, 95, 236, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.readMore-btn {
+    width: 160px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    color: #252525;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 20px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+}
+
+.readMore-btn:hover {
+    color: #FFFFFF;
+    background-color: #0450f5;
+    transition: all ease 0.3s;
+}
+
+.overlay {
+    visibility: hidden;
+}
+
+.overlay a {
+    text-decoration: none;
+}
+
+.slide-img:hover .overlay {
+    visibility: visible;
+    animation: fade 0.5s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 
 /* ----------------------------------------------------------------------- */
 
@@ -404,7 +538,7 @@ header .navigation li a:hover {
 /* Div Container */
 
 .container2 {
-    padding: 100px 250px 100px 250px;
+    padding: 100px 220px 100px 220px;
     justify-content: center;
     align-items: center;
     width: 100%;
